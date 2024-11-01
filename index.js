@@ -6,13 +6,13 @@ const { stripIndent } = require('common-tags');
 const p = '!'
 
 client.on("ready", async() => {
-    console.log(`${client.user.tag} is fucking online`)
+    console.log(`${client.user.tag} is online :p`)
 })
 
 client.on("message", async(message) => {
     if (message.content === `${p}dellstats`) {
         axios({
-            url: "http://10.0.0.30:999/stats",
+            url: "http://192.168.0.17:999/stats",
             method: 'GET',
             followRedirect: true,
             maxRedirects: 5,
